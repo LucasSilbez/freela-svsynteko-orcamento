@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$db = 'crud_synteko';
-$user = 'root';
-$pass = '';
+$db = 'id21621964_crud_synteko';
+$user = 'id21621964_synteko';
+$pass = '#Bona123';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=utf8mb4";
 
