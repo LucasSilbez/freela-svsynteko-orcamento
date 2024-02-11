@@ -125,7 +125,7 @@ $acessorios = listarDados('acessorios');
             <?php endforeach; ?>
         </ul>
 
-
+        <!--
         <h3 class="mt-4">Incluir novo acessório</h3>
         <form method="post" action="" class="mb-4 text-white">
             <input type="hidden" name="acao" value="incluir_acessorio" class="form-control">
@@ -139,6 +139,7 @@ $acessorios = listarDados('acessorios');
             </div>
             <button type="submit" class="btn btn-success btn-block">Incluir</button>
         </form>
+            -->
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

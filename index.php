@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="mt-5">Sistema de Orçamento - SV SYNTEKO</h1>
+    <div class="mt-1" id="container">
+        <h3>Sistema de Orçamento - SV SYNTEKO</h3>
         <div class="orcButtons mt-4">
             <a href="./pages/orcamentoPages/orcLaminado.php" class="btn btn-primary">Laminado</a>
             <a href="./pages/orcamentoPages/orcVinilico.php" class="btn btn-primary">Vinílico</a>

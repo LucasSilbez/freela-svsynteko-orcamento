@@ -1,8 +1,13 @@
 <?php
-$host = 'sql302.infinityfree.com';
+$host = 'localhost';
+$db = 'crud_synteko';
+$user = 'root';
+$pass = '';
+
+/*$host = 'sql302.infinityfree.com';
 $db = 'if0_35950419_crud_synteko';
 $user = 'if0_35950419';
-$pass = '0WX8kWNcomn3pF';
+$pass = '0WX8kWNcomn3pF';*/
 
 $dsn = "mysql:host=$host;dbname=$db;charset=utf8mb4";
 
