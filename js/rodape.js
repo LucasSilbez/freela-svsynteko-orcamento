@@ -30,7 +30,7 @@ async function gerarOrcamentoRodape() {
         increasePercentage = 0.10;
     }
 
-    const metragemLinear = Math.round(metragemLinearOriginal * (1 + increasePercentage));
+    const metragemLinear = Math.ceil(metragemLinearOriginal * (1 + increasePercentage));
 
     const rodapeId = document.getElementById("rodapes").value;
 
@@ -69,7 +69,7 @@ async function gerarOrcamentoRodape() {
 
     const tamanhoBarra = produtosPHP.rodapes.find(produto => produto.id == rodapeId)["tamanho_barra"];
     let quantidadeBarras = metragemLinear / tamanhoBarra;
-    quantidadeBarras = Math.round(quantidadeBarras);
+    quantidadeBarras = Math.ceil(quantidadeBarras);
     const custoRodapes = quantidadeBarras * precoRodape;
 
 

@@ -34,7 +34,7 @@ async function gerarOrcamentoVini() {
     }
 
     const quantidadeVinilicoTotal = quantidadeVinilicoTotalOriginal * (1 + increasePercentage);
-    const metragemLinear = Math.round(metragemLinearOriginal * (1 + increasePercentage));
+    const metragemLinear = Math.ceil(metragemLinearOriginal * (1 + increasePercentage));
 
     const rodapeId = document.getElementById("rodapes").value;
 
@@ -46,7 +46,7 @@ async function gerarOrcamentoVini() {
 
     const metragemPorCaixa = produtosPHP.vinilicos.find(produto => produto.id == vinilicoId)["metragem_embalagem_cx"];
     let quantidadeCaixas = quantidadeVinilicoTotal / metragemPorCaixa;
-    quantidadeCaixas = Math.round(quantidadeCaixas);
+    quantidadeCaixas = Math.ceil(quantidadeCaixas);
 
     let quantidadeCola1_5kg = 0;
     let quantidadeCola5kg = 0;
@@ -67,9 +67,9 @@ async function gerarOrcamentoVini() {
     }
 
 
-    let quantidadeColaLVT = Math.round(quantidadeVinilicoTotal / 10);
-    let quantidadePrimer = Math.round(quantidadeVinilicoTotalOriginal / 60);
-    let quantidadeMassaNivelante = Math.round(quantidadeVinilicoTotal / 4 + 1);
+    let quantidadeColaLVT = Math.ceil(quantidadeVinilicoTotal / 10);
+    let quantidadePrimer = Math.ceil(quantidadeVinilicoTotalOriginal / 60);
+    let quantidadeMassaNivelante = Math.ceil(quantidadeVinilicoTotal / 4 + 1);
 
     const custoColaLVT = quantidadeColaLVT * produtosPHP.acessorios.find(produto => produto.nome == "Cola para piso LVT")["preco"];
     const custoPrimer = quantidadePrimer * produtosPHP.acessorios.find(produto => produto.nome == "Primer")["preco"];
@@ -83,7 +83,7 @@ async function gerarOrcamentoVini() {
 
     const tamanhoBarra = produtosPHP.rodapes.find(produto => produto.id == rodapeId)["tamanho_barra"];
     let quantidadeBarras = metragemLinear / tamanhoBarra;
-    quantidadeBarras = Math.round(quantidadeBarras);
+    quantidadeBarras = Math.ceil(quantidadeBarras);
     const custoRodapes = quantidadeBarras * precoRodape;
 
     const custoVinilico = quantidadeCaixas * precoVinilico;

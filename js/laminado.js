@@ -34,7 +34,7 @@ async function gerarOrcamento() {
     }
 
     const quantidadeLaminadoTotal = quantidadeLaminadoTotalOriginal * 1.10;
-    const metragemLinear = Math.round(metragemLinearOriginal * (1 + increasePercentage));
+    const metragemLinear = Math.ceil(metragemLinearOriginal * (1 + increasePercentage));
 
     const rodapeId = document.getElementById("rodapes").value;
 
@@ -47,10 +47,10 @@ async function gerarOrcamento() {
 
     const metragemPorCaixa = produtosPHP.laminados.find(produto => produto.id == laminadoId)["metragem_embalagem_cx"];
     let quantidadeCaixas = quantidadeLaminadoTotal / metragemPorCaixa;
-    quantidadeCaixas = Math.round(quantidadeCaixas);
+    quantidadeCaixas = Math.ceil(quantidadeCaixas);
 
 
-    const quantidadeManta = Math.round(quantidadeLaminadoTotal / 10) + 1;
+    const quantidadeManta = Math.ceil(quantidadeLaminadoTotal / 10) + 1;
 
 
     let quantidadeCola1_5kg = 0;
@@ -83,7 +83,7 @@ async function gerarOrcamento() {
 
     const tamanhoBarra = produtosPHP.rodapes.find(produto => produto.id == rodapeId)["tamanho_barra"];
     let quantidadeBarras = metragemLinear / tamanhoBarra;
-    quantidadeBarras = Math.round(quantidadeBarras);
+    quantidadeBarras = Math.ceil(quantidadeBarras);
     const custoRodapes = quantidadeBarras * precoRodape;
 
 
