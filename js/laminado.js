@@ -50,7 +50,7 @@ async function gerarOrcamento() {
     quantidadeCaixas = Math.ceil(quantidadeCaixas);
 
 
-    const quantidadeManta = Math.ceil(quantidadeLaminadoTotal / 10) + 1;
+    const quantidadeManta = Math.ceil(quantidadeLaminadoTotal / 10);
 
 
     let quantidadeCola1_5kg = 0;
